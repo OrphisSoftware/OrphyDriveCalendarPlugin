@@ -49,7 +49,6 @@ public class LegacyCalendarAccessor extends AbstractCalendarAccessor {
   protected EnumMap<KeyIndex, String> initContentProviderKeys() {
     EnumMap<KeyIndex, String> keys = new EnumMap<KeyIndex, String>(KeyIndex.class);
     keys.put(KeyIndex.CALENDARS_ID, "_id");
-    keys.put(KeyIndex.CALENDARS_NAME, "name");
     keys.put(KeyIndex.CALENDARS_VISIBLE, "selected");
     keys.put(KeyIndex.EVENTS_ID, "_id");
     keys.put(KeyIndex.EVENTS_CALENDAR_ID, "calendar_id");
@@ -121,13 +120,11 @@ public class LegacyCalendarAccessor extends AbstractCalendarAccessor {
   }
 
   @Override
-  public String createEvent(Uri eventsUri, String title, long startTime, long endTime,
-                          String description, String location, Long firstReminderMinutes, Long secondReminderMinutes,
-                          String recurrence, int recurrenceInterval, Long recurrenceEndTime, Integer calendarId,
-                          String url) {
+  public boolean createEvent(Uri eventsUri, String title, long startTime, long endTime,
+                             String description, String location) {
     eventsUri = eventsUri == null ? Uri.parse(CONTENT_PROVIDER_PRE_FROYO + CONTENT_PROVIDER_PATH_EVENTS) : eventsUri;
-    return super.createEvent(eventsUri, title, startTime, endTime, description, location,
-        firstReminderMinutes, secondReminderMinutes, recurrence, recurrenceInterval, recurrenceEndTime, calendarId, url);
+    return super.createEvent(eventsUri, title, startTime, endTime,
+        description, location);
   }
 
 }
