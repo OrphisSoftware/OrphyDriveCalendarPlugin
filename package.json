@@ -3,7 +3,7 @@
   "version": "4.4.6",
   "description": "This plugin allows you to manipulate the native calendar.",
   "cordova": {
-    "id": "cordova-plugin-calendar",
+    "id": "cordova-plugin-orphyCalendar",
     "platforms": [
       "ios",
       "android"
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EddyVerbruggen/Calendar-PhoneGap-Plugin.git"
+    "url": "git+https://github.com/orphisAG/OrphyDriveCalendarPlugin.git"
   },
   "keywords": [
     "Calendar",
@@ -27,10 +27,10 @@
       "version": ">=3.0.0"
     }
   ],
-  "author": "Eddy Verbruggen <eddyverbruggen@gmail.com> (https://github.com/EddyVerbruggen)",
+  "author": "Eddy Verbruggen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/EddyVerbruggen/Calendar-PhoneGap-Plugin/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/EddyVerbruggen/Calendar-PhoneGap-Plugin#readme"
+  "homepage": ""
 }
