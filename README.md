@@ -1,3 +1,9 @@
+
+# Please use the original Plugin of [Eddy Verbruggen](https://github.com/EddyVerbruggen/Calendar-PhoneGap-Plugin)
+
+
+# We just fixed something relevant for us
+
 # PhoneGap Calendar plugin 
 
 for iOS and Android, by [Eddy Verbruggen](http://www.x-services.nl)
