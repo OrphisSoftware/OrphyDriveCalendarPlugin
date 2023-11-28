@@ -872,6 +872,7 @@
   NSDictionary* calOptions = [options objectForKey:@"options"];
   NSString* calEventID = [calOptions objectForKey:@"id"];
   NSString* calendarName = [calOptions objectForKey:@"calendarName"];
+  NSString* calendarId = [calOptions objectForKey:@"calendarId"];
 
   [self.commandDelegate runInBackground: ^{
     NSTimeInterval _startInterval = [startTime doubleValue] / 1000; // strip millis
@@ -900,7 +901,7 @@
         return;
       }
     } else {
-      EKCalendar * calendar = [self findEKCalendar:calendarName];
+      EKCalendar * calendar = [self findEKCalendar:calendarId];
 
       if (calendar == nil) {
         CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Could not find calendar"];
@@ -920,9 +921,13 @@
     NSArray *matchingEvents;
 
     if (theEvent == nil) {
-      matchingEvents = [self findEKEventsWithTitle:title location:location notes:notes startDate:myStartDate endDate:myEndDate calendars:calendars];
-    } else {
-      matchingEvents = [NSArray arrayWithObject:theEvent];
+        NSMutableArray *foundCalendar = [[NSMutableArray alloc] init];
+        for (EKCalendar * calendar in calendars){
+            if([calendar.calendarIdentifier isEqualToString:calendarId]){
+                [foundCalendar addObject:calendar];
+            }
+        }
+        matchingEvents = [self findEKEventsWithTitle:title location:location notes:notes startDate:myStartDate endDate:myEndDate calendars:foundCalendar];
     }
 
     NSMutableArray * eventsDataArray = [self eventsToDataArray:matchingEvents];
