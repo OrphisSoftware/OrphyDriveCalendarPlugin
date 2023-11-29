@@ -1,9 +1,9 @@
 {
-  "name": "cordova-plugin-calendar-orphis",
+  "name": "cordova-plugin-calendar",
   "version": "4.4.6",
   "description": "This plugin allows you to manipulate the native calendar.",
   "cordova": {
-    "id": "cordova-plugin-orphycalendar",
+    "id": "cordova-plugin-calendar",
     "platforms": [
       "ios",
       "android"
