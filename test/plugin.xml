@@ -19,26 +19,24 @@
 -->
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    xmlns:rim="http://www.blackberry.com/ns/widgets"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    id="cordova-plugin-calendar-tests"
-    version="5.0.0">
-    <name>Cordova Calendar Plugin Tests</name>
-    <license>Apache 2.0</license>
+  xmlns:rim="http://www.blackberry.com/ns/widgets"
+  xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-calendar-orphis-tests" version="5.0.0">
+  <name>Cordova Calendar Plugin Tests</name>
+  <license>Apache 2.0</license>
 
-    <js-module src="tests.js" name="tests">
-    </js-module>
+  <js-module src="tests.js" name="tests">
+  </js-module>
 
-    <platform name="android">
-      <config-file target="res/xml/config.xml" parent="/*">
-        <feature name="CalendarTestsUtility">
-          <param name="android-package" value="org.apache.cordova.calendartests.Utility"/>
-        </feature>
-      </config-file>
-      <config-file target="AndroidManifest.xml" parent="/manifest">
-        <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
-        <uses-permission android:name="android.permission.READ_SYNC_STATS"/>
-      </config-file>
-      <source-file src="src/android/org/apache/cordova/calendartests/Utility.java" target-dir="src/org/apache/cordova/calendartests"/>
-    </platform>
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="CalendarTestsUtility">
+        <param name="android-package" value="org.apache.cordova.calendartests.Utility"/>
+      </feature>
+    </config-file>
+    <config-file target="AndroidManifest.xml" parent="/manifest">
+      <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+      <uses-permission android:name="android.permission.READ_SYNC_STATS"/>
+    </config-file>
+    <source-file src="src/android/org/apache/cordova/calendartests/Utility.java" target-dir="src/org/apache/cordova/calendartests"/>
+  </platform>
 </plugin>

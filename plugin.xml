@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-  xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-calendar"
-    version="5.1.6">
+  xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-calendar-orphis" version="5.1.6">
 
   <name>Calendar</name>
 
@@ -15,19 +14,19 @@
 
   <keywords>Calendar, Agenda, Event</keywords>
 
-  <repo>https://github.com/OrphisSoftware/OrphyDriveCalendarPlugin</repo>
+  <repo>https://github.com/OrphisSoftware/OrphyDriveCalendarPlugin.git</repo>
 
-  <issue>https://github.com/OrphisSoftware/OrphyDriveCalendarPlugin/issues</issue>
+  <issue>https://github.com/EddyVerbruggen/Calendar-PhoneGap-Plugin/issues</issue>
 
   <engines>
-      <engine name="cordova-android" version=">=6.3.0" />
+    <engine name="cordova-android" version=">=6.3.0" />
   </engines>
 
   <js-module src="www/Calendar.js" name="Calendar">
     <clobbers target="Calendar"/>
   </js-module>
 
-<!--   <js-module src="test/tests.js" name="tests">
+  <!--   <js-module src="test/tests.js" name="tests">
   </js-module> -->
 
   <!-- ios -->
@@ -77,12 +76,9 @@
       <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
     </config-file>
     <source-file src="src/android/nl/xservices/plugins/Calendar.java" target-dir="src/nl/xservices/plugins"/>
-    <source-file src="src/android/nl/xservices/plugins/accessor/AbstractCalendarAccessor.java"
-                 target-dir="src/nl/xservices/plugins/accessor"/>
-    <source-file src="src/android/nl/xservices/plugins/accessor/CalendarProviderAccessor.java"
-                 target-dir="src/nl/xservices/plugins/accessor"/>
-    <source-file src="src/android/nl/xservices/plugins/accessor/LegacyCalendarAccessor.java"
-                 target-dir="src/nl/xservices/plugins/accessor"/>
+    <source-file src="src/android/nl/xservices/plugins/accessor/AbstractCalendarAccessor.java" target-dir="src/nl/xservices/plugins/accessor"/>
+    <source-file src="src/android/nl/xservices/plugins/accessor/CalendarProviderAccessor.java" target-dir="src/nl/xservices/plugins/accessor"/>
+    <source-file src="src/android/nl/xservices/plugins/accessor/LegacyCalendarAccessor.java" target-dir="src/nl/xservices/plugins/accessor"/>
   </platform>
 
   <!-- windows -->

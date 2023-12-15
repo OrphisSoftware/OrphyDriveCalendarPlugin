@@ -1,9 +1,9 @@
 {
-  "name": "cordova-plugin-calendar-tests",
+  "name": "cordova-plugin-calendar-orphis-tests",
   "version": "5.0.0",
   "description": "",
   "cordova": {
-    "id": "cordova-plugin-calendar-tests",
+    "id": "cordova-plugin-calendar-orphis-tests",
     "platforms": []
   },
   "keywords": [
